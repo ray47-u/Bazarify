@@ -2,6 +2,8 @@
 
 A futuristic, culturally grounded SME dashboard designed specifically for Bangladesh's small business owners.
 
+🌐 **Live Website**: [https://bazarify-36431.web.app](https://bazarify-36431.web.app)
+
 ## Design Philosophy
 
 - **Warm & Human**: Feels like a trusted business partner, not a cold corporate tool
