@@ -16,13 +16,15 @@ const Layout = () => {
 
   return (
     <div className="app-layout">
-      <button className="mobile-menu-toggle" onClick={toggleSidebar}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
+      {!sidebarOpen && (
+        <button className="mobile-menu-toggle" onClick={toggleSidebar} aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      )}
       {sidebarOpen && <div className="sidebar-overlay" onClick={closeSidebar}></div>}
+      <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
       <main className="main-content">
         <Outlet />
       </main>

@@ -26,6 +26,7 @@
   gap: var(--space-3);
   padding: var(--space-6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
 }
 
 .brand-icon {
@@ -57,6 +58,33 @@
   font-size: var(--text-xs);
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
+}
+
+/* Close Button for Mobile */
+.sidebar-close-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: var(--space-4);
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-lg);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.sidebar-close-btn:active {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(0.9);
 }
 
 /* Sidebar Menu */
@@ -125,6 +153,40 @@
 .sidebar-footer {
   padding: var(--space-4);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Cancel Button for Mobile */
+.sidebar-cancel-btn {
+  display: none;
+  width: 100%;
+  padding: var(--space-4);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-lg);
+  color: white;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  transition: all 0.2s ease;
+}
+
+.sidebar-cancel-btn:active {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(0.97);
+}
+
+.cancel-icon {
+  font-size: 20px;
+}
+
+.cancel-text {
+  font-size: var(--text-sm);
 }
 
 .user-info {
@@ -208,6 +270,14 @@
 
   .brand-tagline {
     display: none;
+  }
+
+  .sidebar-close-btn {
+    display: flex;
+  }
+
+  .sidebar-cancel-btn {
+    display: flex;
   }
 }
 

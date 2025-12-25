@@ -42,6 +42,11 @@ const Sidebar = ({ isOpen, onClose }) => {
       </div>
 
       <div className="sidebar-footer">
+        <button className="sidebar-cancel-btn" onClick={onClose}>
+          <span className="cancel-icon">✕</span>
+          <span className="cancel-text">বন্ধ করুন (Close)</span>
+        </button>
+        
         <div className="user-info">
           <div className="user-avatar">👤</div>
           <div className="user-details">
