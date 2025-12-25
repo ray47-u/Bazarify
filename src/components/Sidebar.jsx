@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, onClose }) => {
   const menuItems = [
     { path: '/dashboard', icon: '🏠', label: 'হোম', labelEn: 'Dashboard' },
     { path: '/ai-decisions', icon: '🤖', label: 'AI সিদ্ধান্ত', labelEn: 'AI Decisions' },
@@ -13,7 +13,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <nav className="sidebar">
+    <nav className={`sidebar ${isOpen ? 'mobile-open' : ''}`}>
       <div className="sidebar-brand">
         <div className="brand-icon">🧠</div>
         <div className="brand-text">
@@ -30,6 +30,7 @@ const Sidebar = () => {
             className={({ isActive }) => 
               isActive ? 'menu-item active' : 'menu-item'
             }
+            onClick={onClose}
           >
             <span className="menu-icon">{item.icon}</span>
             <div className="menu-labels">
