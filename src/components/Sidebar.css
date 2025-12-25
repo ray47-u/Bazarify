@@ -196,9 +196,10 @@
 /* Responsive - Mobile */
 @media (max-width: 768px) {
   .sidebar {
-    width: 240px;
+    width: 280px;
     transform: translateX(-100%);
-    transition: transform var(--transition-base);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
   }
 
   .sidebar.mobile-open {
