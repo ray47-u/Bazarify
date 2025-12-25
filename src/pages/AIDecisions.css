@@ -1,0 +1,551 @@
+/* AI Decisions Page - Price & Trust Decisions */
+
+@import '../design-system.css';
+
+.ai-decisions-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+  padding: var(--space-8);
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: var(--space-8);
+}
+
+.header-content {
+  margin-bottom: var(--space-4);
+}
+
+.page-title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.page-subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ai-stats {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: var(--success-light);
+  color: var(--success-dark);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+}
+
+.stat-badge.pending {
+  background: var(--warning-light);
+  color: var(--warning-dark);
+}
+
+.stat-icon {
+  font-size: 1.1rem;
+}
+
+/* Section Header */
+.decisions-section {
+  margin-bottom: var(--space-12);
+}
+
+.section-header {
+  margin-bottom: var(--space-6);
+}
+
+.section-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.section-description {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Price Decisions Grid */
+.decisions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: var(--space-6);
+}
+
+.decision-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--border-light);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.decision-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-sky-teal);
+}
+
+.decision-card.implemented {
+  border-left: 5px solid var(--success);
+}
+
+.decision-card.pending {
+  border-left: 5px solid var(--warning);
+}
+
+.decision-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-5);
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-name {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.decision-time {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.status-badge {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.implemented {
+  background: var(--success-light);
+  color: var(--success-dark);
+}
+
+.status-badge.pending {
+  background: var(--warning-light);
+  color: var(--warning-dark);
+}
+
+/* Price Comparison */
+.price-comparison {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  padding: var(--space-5);
+  background: linear-gradient(
+    135deg,
+    var(--bg-secondary),
+    var(--color-earth-green-pale)
+  );
+  border-radius: var(--radius-lg);
+}
+
+.price-box {
+  flex: 1;
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+}
+
+.price-box.before {
+  border: 2px solid var(--error);
+}
+
+.price-box.after {
+  border: 2px solid var(--success);
+}
+
+.price-label {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: var(--font-bold);
+}
+
+.price-value {
+  display: block;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.arrow-indicator {
+  font-size: 2rem;
+  color: var(--color-sky-teal);
+  font-weight: var(--font-bold);
+}
+
+/* Decision Reason */
+.decision-reason {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: rgba(82, 163, 159, 0.1);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.reason-icon {
+  font-size: 1.5rem;
+}
+
+.reason-text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  font-weight: var(--font-medium);
+}
+
+/* Decision Impact */
+.decision-impact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.impact-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-weight: var(--font-semibold);
+}
+
+.impact-value {
+  font-size: var(--text-lg);
+  color: var(--success);
+  font-weight: var(--font-bold);
+}
+
+/* Confidence Bar */
+.confidence-bar {
+  margin-bottom: var(--space-4);
+}
+
+.confidence-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-weight: var(--font-semibold);
+}
+
+.confidence-percent {
+  color: var(--color-sky-teal);
+  font-weight: var(--font-bold);
+}
+
+.confidence-track {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-sky-teal),
+    var(--color-earth-green)
+  );
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+/* Decision Actions */
+.decision-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.action-btn {
+  flex: 1;
+  padding: var(--space-3) var(--space-5);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.action-btn.approve {
+  background: var(--success);
+  color: var(--text-inverse);
+}
+
+.action-btn.approve:hover {
+  background: var(--success-dark);
+  transform: translateY(-2px);
+}
+
+.action-btn.reject {
+  background: var(--error);
+  color: var(--text-inverse);
+}
+
+.action-btn.reject:hover {
+  background: var(--error-dark);
+  transform: translateY(-2px);
+}
+
+/* Trust Decisions */
+.trust-decisions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.trust-decision-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.trust-decision-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-earth-green-light);
+}
+
+.trust-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.customer-avatar {
+  font-size: 2.5rem;
+  width: 64px;
+  height: 64px;
+  background: var(--color-earth-green-pale);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-name {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.trust-score-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.trust-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.trust-score {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+}
+
+.trust-score.high-trust {
+  background: var(--success-light);
+  color: var(--success-dark);
+}
+
+.trust-score.medium-trust {
+  background: var(--warning-light);
+  color: var(--warning-dark);
+}
+
+.trust-score.low-trust {
+  background: var(--error-light);
+  color: var(--error-dark);
+}
+
+/* Decision Summary */
+.decision-summary {
+  display: flex;
+  gap: var(--space-6);
+  margin-bottom: var(--space-5);
+  padding: var(--space-5);
+  background: linear-gradient(
+    135deg,
+    var(--color-earth-green-pale),
+    rgba(82, 163, 159, 0.1)
+  );
+  border-radius: var(--radius-lg);
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.summary-item.main {
+  flex: 1;
+}
+
+.summary-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-weight: var(--font-semibold);
+}
+
+.summary-value {
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+  font-weight: var(--font-bold);
+}
+
+.summary-value.highlight {
+  color: var(--color-sky-teal);
+  font-size: var(--text-xl);
+}
+
+/* Decision Analysis */
+.decision-analysis {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.analysis-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.analysis-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.analysis-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.analysis-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-weight: var(--font-semibold);
+}
+
+.analysis-text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+}
+
+.risk-badge.low-risk {
+  background: var(--success-light);
+  color: var(--success-dark);
+}
+
+.risk-badge.medium-risk {
+  background: var(--warning-light);
+  color: var(--warning-dark);
+}
+
+.risk-badge.high-risk {
+  background: var(--error-light);
+  color: var(--error-dark);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .decisions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-decisions-page {
+    padding: var(--space-4);
+  }
+
+  .page-title {
+    font-size: var(--text-3xl);
+  }
+
+  .decisions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-comparison {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .arrow-indicator {
+    transform: rotate(90deg);
+  }
+
+  .decision-summary {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .trust-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}

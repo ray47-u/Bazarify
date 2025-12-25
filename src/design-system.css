@@ -1,0 +1,417 @@
+/* BazaarMind Design System */
+/* Color Palette for Bangladeshi SMEs - Warm, Earthy, Trustworthy */
+
+:root {
+  /* === PRIMARY COLORS - Earthy Greens === */
+  --color-earth-green-dark: #2D5016;
+  --color-earth-green: #4A7C2C;
+  --color-earth-green-medium: #6B9440;
+  --color-earth-green-light: #8FB85F;
+  --color-earth-green-lighter: #B8D99B;
+  --color-earth-green-pale: #E5F2D8;
+
+  /* === SECONDARY COLORS - Warm Neutrals === */
+  --color-clay-brown: #8B6F47;
+  --color-sand: #C4A777;
+  --color-cream: #E8D7B8;
+  --color-warm-white: #FFF9F0;
+  --color-paper: #FFFEF8;
+  
+  /* === ACCENT COLORS - Soft Highlights === */
+  --color-sunset-orange: #E8763F;
+  --color-mango-yellow: #F4B942;
+  --color-terracotta: #CC6B49;
+  --color-sky-teal: #52A39F;
+  --color-marigold: #F39C4C;
+
+  /* === TEXT COLORS === */
+  --text-primary: #2C1F15;
+  --text-secondary: #5A4A3A;
+  --text-muted: #8B7A6A;
+  --text-light: #A69888;
+  --text-inverse: #FFFFFF;
+
+  /* === BACKGROUND COLORS === */
+  --bg-primary: #FFFEF8;
+  --bg-secondary: #FFF9F0;
+  --bg-tertiary: #F5EFE6;
+  --bg-surface: #FFFFFF;
+  --bg-overlay: rgba(44, 31, 21, 0.6);
+
+  /* === SEMANTIC COLORS === */
+  --success: #6B9440;
+  --success-light: #B8D99B;
+  --success-dark: #4A7C2C;
+  
+  --warning: #F4B942;
+  --warning-light: #FCE5A8;
+  --warning-dark: #D89B1F;
+  
+  --error: #CC6B49;
+  --error-light: #F4C8B8;
+  --error-dark: #A34A2E;
+  
+  --info: #52A39F;
+  --info-light: #B3DCD9;
+  --info-dark: #3A7773;
+
+  /* === BORDER COLORS === */
+  --border-default: rgba(139, 111, 71, 0.2);
+  --border-light: rgba(139, 111, 71, 0.1);
+  --border-medium: rgba(139, 111, 71, 0.3);
+  --border-dark: rgba(139, 111, 71, 0.5);
+
+  /* === SHADOW COLORS === */
+  --shadow-sm: 0 2px 6px rgba(44, 31, 21, 0.06);
+  --shadow-md: 0 4px 12px rgba(44, 31, 21, 0.1);
+  --shadow-lg: 0 8px 24px rgba(44, 31, 21, 0.12);
+  --shadow-xl: 0 12px 36px rgba(44, 31, 21, 0.15);
+  --shadow-inner: inset 0 2px 6px rgba(44, 31, 21, 0.08);
+
+  /* === TYPOGRAPHY === */
+  /* Font Families - Friendly and Readable */
+  --font-primary: 'Hind Siliguri', 'Noto Sans Bengali', 'Kalpurush', sans-serif;
+  --font-display: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+  --font-mono: 'Courier New', monospace;
+
+  /* Font Sizes - Relaxed Scale */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  --text-5xl: 3rem;        /* 48px */
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Line Heights - Spacious for Readability */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* === SPACING - Relaxed System === */
+  --space-1: 0.25rem;      /* 4px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.25rem;      /* 20px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-7: 1.75rem;      /* 28px */
+  --space-8: 2rem;         /* 32px */
+  --space-10: 2.5rem;      /* 40px */
+  --space-12: 3rem;        /* 48px */
+  --space-16: 4rem;        /* 64px */
+  --space-20: 5rem;        /* 80px */
+  --space-24: 6rem;        /* 96px */
+
+  /* === BORDER RADIUS - Soft and Friendly === */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* === TRANSITIONS === */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slowest: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* === Z-INDEX SCALE === */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+}
+
+/* === UTILITY CLASSES === */
+
+/* Text Colors */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.text-light { color: var(--text-light); }
+.text-inverse { color: var(--text-inverse); }
+
+.text-earth-green { color: var(--color-earth-green); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-error { color: var(--error); }
+.text-info { color: var(--info); }
+
+/* Background Colors */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-surface { background-color: var(--bg-surface); }
+
+.bg-earth-green { background-color: var(--color-earth-green); }
+.bg-earth-green-light { background-color: var(--color-earth-green-light); }
+.bg-earth-green-pale { background-color: var(--color-earth-green-pale); }
+
+.bg-success { background-color: var(--success); }
+.bg-success-light { background-color: var(--success-light); }
+
+.bg-warning { background-color: var(--warning); }
+.bg-warning-light { background-color: var(--warning-light); }
+
+/* Typography */
+.font-primary { font-family: var(--font-primary); }
+.font-display { font-family: var(--font-display); }
+
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+.text-4xl { font-size: var(--text-4xl); }
+
+.font-light { font-weight: var(--font-light); }
+.font-regular { font-weight: var(--font-regular); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+.leading-tight { line-height: var(--leading-tight); }
+.leading-normal { line-height: var(--leading-normal); }
+.leading-relaxed { line-height: var(--leading-relaxed); }
+.leading-loose { line-height: var(--leading-loose); }
+
+/* Spacing */
+.p-2 { padding: var(--space-2); }
+.p-4 { padding: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+.p-8 { padding: var(--space-8); }
+
+.m-2 { margin: var(--space-2); }
+.m-4 { margin: var(--space-4); }
+.m-6 { margin: var(--space-6); }
+.m-8 { margin: var(--space-8); }
+
+/* Border Radius */
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-2xl { border-radius: var(--radius-2xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* Shadows */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* === COMPONENT PATTERNS === */
+
+/* Card Pattern */
+.card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Button Pattern */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-normal);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-earth-green), var(--color-earth-green-medium));
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-earth-green-dark), var(--color-earth-green));
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 2px solid var(--border-medium);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-dark);
+}
+
+/* Input Pattern */
+.input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 2px solid var(--border-default);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-earth-green);
+  box-shadow: 0 0 0 3px var(--color-earth-green-pale);
+}
+
+/* Badge Pattern */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-full);
+  line-height: 1;
+}
+
+.badge-success {
+  background: var(--success-light);
+  color: var(--success-dark);
+}
+
+.badge-warning {
+  background: var(--warning-light);
+  color: var(--warning-dark);
+}
+
+.badge-error {
+  background: var(--error-light);
+  color: var(--error-dark);
+}
+
+/* === GLOBAL RESETS === */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+}
+
+h1 { font-size: var(--text-4xl); margin-bottom: var(--space-6); }
+h2 { font-size: var(--text-3xl); margin-bottom: var(--space-5); }
+h3 { font-size: var(--text-2xl); margin-bottom: var(--space-4); }
+h4 { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+h5 { font-size: var(--text-lg); margin-bottom: var(--space-3); }
+h6 { font-size: var(--text-base); margin-bottom: var(--space-3); }
+
+p {
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-relaxed);
+}
+
+a {
+  color: var(--color-earth-green);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-earth-green-dark);
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-earth-green-light);
+  color: var(--text-inverse);
+}
+
+::-moz-selection {
+  background: var(--color-earth-green-light);
+  color: var(--text-inverse);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-clay-brown);
+}

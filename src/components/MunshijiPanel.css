@@ -1,0 +1,549 @@
+/* Munshiji Panel - Trusted business advisor interface */
+/* Design: Warm, respectful, mentor-like, simple language */
+
+.munshiji-panel {
+  background: linear-gradient(135deg, #FFFBF5 0%, #FFF8F0 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: 'Hind Siliguri', sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(247, 184, 1, 0.2);
+}
+
+/* Munshiji Header */
+.munshiji-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(139, 115, 85, 0.15);
+}
+
+.munshiji-avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #F7B801 0%, #FFD93D 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(247, 184, 1, 0.3);
+  border: 3px solid white;
+}
+
+.avatar-icon {
+  font-size: 2.5rem;
+}
+
+.avatar-status {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background: #06A77D;
+  border-radius: 50%;
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.munshiji-greeting {
+  flex: 1;
+}
+
+.greeting-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2C1810;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.3px;
+}
+
+.greeting-subtitle {
+  font-size: 0.95rem;
+  color: #5D4E37;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Profit Story */
+.profit-story {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #F7B801;
+}
+
+.story-intro {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.story-icon {
+  font-size: 1.5rem;
+}
+
+.story-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2C1810;
+  margin: 0;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.story-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #2C1810;
+  margin: 0;
+}
+
+.highlight-amount {
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.highlight-amount.sales {
+  color: #004E89;
+  background: linear-gradient(to bottom, transparent 65%, rgba(0, 78, 137, 0.15) 65%);
+}
+
+.highlight-amount.profit {
+  color: #06A77D;
+  background: linear-gradient(to bottom, transparent 65%, rgba(6, 167, 125, 0.15) 65%);
+  font-size: 1.15rem;
+}
+
+/* Profit Comparison */
+.profit-comparison {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-radius: 12px;
+}
+
+.comparison-positive {
+  background: linear-gradient(135deg, rgba(6, 167, 125, 0.08), rgba(6, 167, 125, 0.04));
+  border-left: 3px solid #06A77D;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.comparison-negative {
+  background: linear-gradient(135deg, rgba(214, 40, 40, 0.08), rgba(214, 40, 40, 0.04));
+  border-left: 3px solid #D62828;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.comparison-neutral {
+  background: linear-gradient(135deg, rgba(72, 149, 239, 0.08), rgba(72, 149, 239, 0.04));
+  border-left: 3px solid #4895EF;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.comparison-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.comparison-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2C1810;
+  margin: 0;
+  display: inline;
+}
+
+.comparison-text strong {
+  font-weight: 700;
+}
+
+/* Business Insight */
+.business-insight {
+  background: rgba(72, 149, 239, 0.08);
+  padding: 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #4895EF;
+}
+
+.insight-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.insight-icon {
+  font-size: 1.3rem;
+}
+
+.insight-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2C1810;
+  margin: 0;
+}
+
+.insight-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C1810;
+  margin: 0;
+}
+
+.insight-text strong {
+  color: #004E89;
+  font-weight: 700;
+}
+
+/* Munshiji's Suggestion */
+.munshiji-suggestion {
+  background: linear-gradient(135deg, rgba(247, 184, 1, 0.12), rgba(255, 217, 61, 0.08));
+  padding: 1.75rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  border: 2px solid rgba(247, 184, 1, 0.3);
+}
+
+.suggestion-header {
+  margin-bottom: 1.25rem;
+}
+
+.suggestion-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #F7B801, #FFD93D);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(247, 184, 1, 0.3);
+}
+
+.badge-icon {
+  font-size: 1.2rem;
+}
+
+.suggestion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.suggestion-message {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2C1810;
+  margin: 0;
+}
+
+.suggestion-message strong {
+  font-weight: 700;
+  color: #004E89;
+}
+
+/* Action Card */
+.action-card {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.action-number {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #F7B801, #FFD93D);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.action-text {
+  flex: 1;
+}
+
+.action-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2C1810;
+  margin-bottom: 0.5rem;
+}
+
+.action-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5D4E37;
+  margin: 0;
+}
+
+/* Suggestion Footer */
+.suggestion-footer {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.action-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.25rem;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button.primary {
+  background: linear-gradient(135deg, #06A77D, #05c996);
+  color: white;
+  box-shadow: 0 2px 8px rgba(6, 167, 125, 0.3);
+}
+
+.action-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 167, 125, 0.4);
+}
+
+.action-button.secondary {
+  background: white;
+  color: #5D4E37;
+  border: 2px solid rgba(139, 115, 85, 0.3);
+}
+
+.action-button.secondary:hover {
+  background: rgba(139, 115, 85, 0.05);
+  border-color: rgba(139, 115, 85, 0.5);
+}
+
+.button-icon {
+  font-size: 1.1rem;
+}
+
+/* Expandable Section */
+.munshiji-expand {
+  margin-bottom: 1.5rem;
+}
+
+.expand-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: rgba(139, 115, 85, 0.08);
+  border: 1px solid rgba(139, 115, 85, 0.15);
+  border-radius: 12px;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #5D4E37;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expand-button:hover {
+  background: rgba(139, 115, 85, 0.12);
+}
+
+.expand-icon {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.expand-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Expanded Details */
+.expanded-details {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 115, 85, 0.15);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-section {
+  margin-bottom: 1rem;
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2C1810;
+  margin-bottom: 0.75rem;
+}
+
+.detail-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 8px;
+}
+
+.detail-row.total {
+  background: rgba(6, 167, 125, 0.1);
+  border-left: 3px solid #06A77D;
+  font-weight: 600;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: #5D4E37;
+}
+
+.detail-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2C1810;
+}
+
+.detail-value.expense {
+  color: #D62828;
+}
+
+.detail-value.profit {
+  color: #06A77D;
+  font-size: 1.1rem;
+}
+
+/* Munshiji Footer */
+.munshiji-footer {
+  text-align: center;
+  padding: 1.25rem;
+  background: rgba(247, 184, 1, 0.08);
+  border-radius: 12px;
+}
+
+.footer-message {
+  font-size: 0.95rem;
+  color: #5D4E37;
+  margin: 0;
+  font-style: italic;
+}
+
+.footer-icon {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .munshiji-panel {
+    padding: 1.5rem;
+  }
+
+  .greeting-text {
+    font-size: 1.4rem;
+  }
+
+  .story-paragraph {
+    font-size: 1rem;
+  }
+
+  .suggestion-footer {
+    flex-direction: column;
+  }
+
+  .action-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .action-number {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .munshiji-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .greeting-text {
+    font-size: 1.3rem;
+  }
+
+  .avatar-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .avatar-icon {
+    font-size: 2rem;
+  }
+}

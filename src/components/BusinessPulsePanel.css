@@ -1,0 +1,307 @@
+/* Business Pulse Panel - Diary-style narrative design */
+/* Design: Calm, reassuring, human, minimal boxes */
+
+.business-pulse-panel {
+  background: linear-gradient(to bottom, #FFFBF5, #FFF8F0);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Hind Siliguri', sans-serif;
+  line-height: 1.8;
+  box-shadow: 0 2px 12px rgba(44, 24, 16, 0.06);
+}
+
+/* Greeting Section */
+.pulse-greeting {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(139, 115, 85, 0.15);
+}
+
+.greeting-text {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2C1810;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.health-assessment {
+  font-size: 1.1rem;
+  color: #5D4E37;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Business Story - Narrative Blocks */
+.business-story {
+  margin-bottom: 2rem;
+}
+
+.story-paragraph {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: #2C1810;
+  line-height: 1.9;
+}
+
+.story-paragraph.subtle {
+  color: #5D4E37;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.story-time {
+  display: inline-block;
+  font-weight: 600;
+  color: #004E89;
+  margin-right: 0.5rem;
+  padding: 2px 8px;
+  background: rgba(0, 78, 137, 0.08);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.story-label {
+  display: inline-block;
+  font-weight: 600;
+  color: #5D4E37;
+  margin-right: 0.5rem;
+}
+
+.story-text {
+  color: #2C1810;
+}
+
+/* Subtle Color Accents - Not boxes */
+.highlight-number {
+  font-weight: 700;
+  padding: 0 4px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.highlight-number.sales {
+  color: #004E89;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 78, 137, 0.12) 60%);
+}
+
+.highlight-number.expenses {
+  color: #D62828;
+  background: linear-gradient(to bottom, transparent 60%, rgba(214, 40, 40, 0.1) 60%);
+}
+
+.highlight-number.customers {
+  color: #06A77D;
+  background: linear-gradient(to bottom, transparent 60%, rgba(6, 167, 125, 0.12) 60%);
+}
+
+.highlight-product {
+  font-weight: 600;
+  color: #F7B801;
+  border-bottom: 2px solid rgba(247, 184, 1, 0.3);
+  padding-bottom: 1px;
+}
+
+.story-insight {
+  display: inline;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.story-insight.positive {
+  color: #06A77D;
+}
+
+.story-detail {
+  color: #5D4E37;
+}
+
+/* Story Dividers */
+.story-divider {
+  height: 1px;
+  background: linear-gradient(to right, 
+    transparent, 
+    rgba(139, 115, 85, 0.2) 20%, 
+    rgba(139, 115, 85, 0.2) 80%, 
+    transparent);
+  margin: 1.5rem 0;
+}
+
+.story-divider.subtle {
+  background: linear-gradient(to right, 
+    transparent, 
+    rgba(139, 115, 85, 0.1) 30%, 
+    rgba(139, 115, 85, 0.1) 70%, 
+    transparent);
+  margin: 1rem 0;
+}
+
+/* Profit Narrative - The Main Outcome */
+.profit-narrative {
+  background: linear-gradient(135deg, 
+    rgba(6, 167, 125, 0.08) 0%, 
+    rgba(6, 167, 125, 0.04) 100%);
+  padding: 1.75rem 2rem;
+  border-radius: 16px;
+  margin: 2rem 0;
+  border-left: 3px solid rgba(6, 167, 125, 0.4);
+}
+
+.profit-intro {
+  margin-bottom: 0.5rem;
+}
+
+.profit-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5D4E37;
+  font-weight: 600;
+}
+
+.profit-statement {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.profit-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #06A77D;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.profit-context {
+  font-size: 1rem;
+  color: #5D4E37;
+  font-weight: 500;
+}
+
+.profit-message {
+  font-size: 1rem;
+  color: #2C1810;
+  margin: 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Quick Summary Footer */
+.pulse-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(139, 115, 85, 0.15);
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  color: #8B7355;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2C1810;
+}
+
+.summary-item.profit .summary-value {
+  color: #06A77D;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.summary-divider {
+  font-size: 1.2rem;
+  color: #8B7355;
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .business-pulse-panel {
+    padding: 2rem 1.5rem;
+  }
+
+  .greeting-text {
+    font-size: 1.5rem;
+  }
+
+  .health-assessment {
+    font-size: 1rem;
+  }
+
+  .story-paragraph {
+    font-size: 1rem;
+  }
+
+  .profit-amount {
+    font-size: 2rem;
+  }
+
+  .pulse-summary {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .summary-item {
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-pulse-panel {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+
+  .greeting-text {
+    font-size: 1.3rem;
+  }
+
+  .story-paragraph {
+    font-size: 0.95rem;
+  }
+
+  .profit-narrative {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .profit-amount {
+    font-size: 1.75rem;
+  }
+}
+
+/* Subtle hover effects for interactive feel */
+.business-pulse-panel:hover .highlight-number {
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 78, 137, 0.18) 50%);
+}
+
+.business-pulse-panel:hover .highlight-number.sales {
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 78, 137, 0.18) 50%);
+}
+
+.business-pulse-panel:hover .highlight-number.expenses {
+  background: linear-gradient(to bottom, transparent 50%, rgba(214, 40, 40, 0.15) 50%);
+}
+
+.business-pulse-panel:hover .highlight-number.customers {
+  background: linear-gradient(to bottom, transparent 50%, rgba(6, 167, 125, 0.18) 50%);
+}

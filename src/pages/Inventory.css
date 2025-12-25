@@ -1,0 +1,452 @@
+/* Inventory Page - Stockout & Overstock Prevention */
+
+@import '../design-system.css';
+
+.inventory-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+  padding: var(--space-8);
+}
+
+.page-header {
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.page-title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.page-subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Stock Explanation */
+.stock-explanation-section {
+  margin-bottom: var(--space-10);
+}
+
+.explanation-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  border-left: 5px solid var(--color-earth-green);
+}
+
+.explanation-card.info {
+  border-left-color: var(--color-sky-teal);
+}
+
+.explanation-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.explanation-text {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--line-relaxed);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.stock-status-guide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.status-guide {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid;
+}
+
+.status-guide.danger {
+  background: var(--error-light);
+  border-left-color: var(--error);
+}
+
+.status-guide.success {
+  background: var(--success-light);
+  border-left-color: var(--success);
+}
+
+.status-guide.warning {
+  background: var(--warning-light);
+  border-left-color: var(--warning);
+}
+
+.status-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.status-info {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--line-relaxed);
+}
+
+.status-info strong {
+  color: var(--text-primary);
+  font-weight: var(--font-bold);
+}
+
+/* Inventory Summary */
+.inventory-summary {
+  margin-bottom: var(--space-10);
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 2px solid;
+  transition: all var(--transition-base);
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.summary-card.danger {
+  border-color: var(--error);
+}
+
+.summary-card.success {
+  border-color: var(--success);
+}
+
+.summary-card.warning {
+  border-color: var(--warning);
+}
+
+.card-icon {
+  font-size: 3rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.card-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: var(--font-bold);
+}
+
+.card-value {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+/* Inventory Grid */
+.inventory-items-section {
+  margin-bottom: var(--space-10);
+}
+
+.section-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: var(--space-6);
+}
+
+.inventory-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.inventory-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.inventory-card.danger {
+  border-left: 5px solid var(--error);
+}
+
+.inventory-card.success {
+  border-left: 5px solid var(--success);
+}
+
+.inventory-card.warning {
+  border-left: 5px solid var(--warning);
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.item-icon {
+  font-size: 2.5rem;
+  width: 56px;
+  height: 56px;
+  background: var(--color-earth-green-pale);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-name {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.item-supplier {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.stock-progress {
+  margin-bottom: var(--space-5);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.current-stock {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.min-stock {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.progress-bar {
+  height: 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-earth-green), var(--color-sky-teal));
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.item-stats {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.stat-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-weight: var(--font-semibold);
+}
+
+.stat-value {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  font-weight: var(--font-bold);
+}
+
+.ai-action {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+}
+
+.ai-action.danger {
+  background: var(--error-light);
+}
+
+.ai-action.success {
+  background: var(--success-light);
+}
+
+.ai-action.warning {
+  background: var(--warning-light);
+}
+
+.action-icon {
+  font-size: 1.5rem;
+}
+
+.action-text {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  font-weight: var(--font-bold);
+}
+
+.order-btn,
+.discount-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.order-btn {
+  background: var(--error);
+  color: var(--text-inverse);
+}
+
+.order-btn:hover {
+  background: var(--error-dark);
+  transform: translateY(-2px);
+}
+
+.discount-btn {
+  background: var(--warning);
+  color: var(--text-primary);
+}
+
+.discount-btn:hover {
+  background: var(--warning-dark);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Tips Section */
+.tips-section {
+  margin-bottom: var(--space-8);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+
+.tip-card {
+  text-align: center;
+  padding: var(--space-6);
+  background: linear-gradient(135deg, var(--bg-secondary), var(--color-earth-green-pale));
+  border-radius: var(--radius-lg);
+}
+
+.tip-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-3);
+}
+
+.tip-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.tip-text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--line-relaxed);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .inventory-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .inventory-page {
+    padding: var(--space-4);
+  }
+
+  .page-title {
+    font-size: var(--text-3xl);
+  }
+
+  .inventory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explanation-card {
+    padding: var(--space-6);
+  }
+}

@@ -1,0 +1,148 @@
+/* Design Showcase Styles */
+
+.design-showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-6);
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+  padding: var(--space-12) var(--space-6);
+  background: linear-gradient(135deg, var(--color-earth-green-pale), var(--color-warm-white));
+  border-radius: var(--radius-2xl);
+}
+
+.showcase-header h1 {
+  color: var(--color-earth-green-dark);
+  margin-bottom: var(--space-4);
+}
+
+.showcase-subtitle {
+  font-size: var(--text-xl);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.showcase-section {
+  margin-bottom: var(--space-16);
+}
+
+.showcase-section h2 {
+  color: var(--color-earth-green);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 3px solid var(--color-earth-green-pale);
+}
+
+/* Color Swatches */
+.color-category {
+  margin-bottom: var(--space-10);
+}
+
+.color-category h3 {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-lg);
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-6);
+}
+
+.color-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.swatch {
+  width: 100%;
+  height: 100px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.swatch-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.swatch-name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+.swatch-hex {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+/* Typography Demo */
+.typography-demo {
+  background: var(--bg-surface);
+  padding: var(--space-10);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.type-sample h1,
+.type-sample h2,
+.type-sample h3,
+.type-sample h4 {
+  color: var(--color-earth-green-dark);
+}
+
+.type-sample p {
+  max-width: 65ch;
+}
+
+/* Button Demo */
+.button-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Card Demo */
+.card-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Badge Demo */
+.badge-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Form Demo */
+.form-demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .design-showcase {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .showcase-header {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
